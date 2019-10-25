@@ -1,0 +1,26 @@
+﻿@page "/"
+@using WebApplicationServer1.Data
+
+<h1>Hello World!</h1>
+
+<button class="btn btn-primary" @onclick="ChangeText">Say hello</button>
+
+<h2>@greetingText</h2>
+<img src="@greetingImage" alt="" />
+
+@code {
+    private string greetingText = "";
+
+    private string greetingImage = "";
+
+    Animal randomAnimal;
+
+    private async void ChangeText()
+    {
+        randomAnimal = await AnimalListService.GetRandomAnimal();
+
+        greetingText = $"Hello {randomAnimal.Name}!";
+
+        greetingImage = randomAnimal.ImageUrl;
+    }
+}

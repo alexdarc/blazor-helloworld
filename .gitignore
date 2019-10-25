@@ -1,0 +1,17 @@
+!packages/*
+tempYml
+[Oo]bj
+[Bb]in
+*.user
+*.log
+*.suo
+*.[Cc]ache
+_BuildOutput
+*.DotSettings
+_ReSharper.*
+*.resharper
+*.orig
+.vs
+TestResults
+logs
+.OpenIDE
